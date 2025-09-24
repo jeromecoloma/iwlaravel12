@@ -1,0 +1,25 @@
+pre-push:
+  commands:
+    backend-tests:
+      run: cd www && composer test
+      fail_text: "Backend tests failed!"
+
+    frontend-tests:
+      run: cd www && npm test -- --run
+      fail_text: "Frontend tests failed!"
+
+    php-formatting:
+      run: cd www && vendor/bin/pint --test
+      fail_text: "PHP code formatting check failed!"
+
+    js-linting:
+      run: cd www && npm run lint:check
+      fail_text: "JavaScript linting failed!"
+
+    type-check:
+      run: cd www && npm run type-check
+      fail_text: "TypeScript type checking failed!"
+
+    format-check:
+      run: cd www && npm run format:check
+      fail_text: "Format check failed!"

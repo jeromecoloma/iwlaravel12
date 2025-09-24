@@ -1,0 +1,63 @@
+---
+description: Implement or modify code per requirements and tasks.
+argument-hint: start|status
+---
+
+You are managing autonomous development for the current project (iwlaravel12) using Laravel 12 + React + Inertia + shadcn/ui.
+Follow this protocol exactly.
+
+**Arguments:**
+- No args or "start": Initialize/resume development cycle
+- "status": Show current development state only
+
+Handle argument: $ARGUMENTS
+
+**AUTONOMOUS DEVELOPMENT PROTOCOL:**
+
+1. **READ STATE** (always check current state first):
+   - Read ".ai-workflow/state/tasks.md" → find next incomplete task "[ ]"
+   - Read ".ai-workflow/state/requirements.md" → understand project goals and constraints
+   - Read ".ai-workflow/state/progress.log" → check recent progress
+   - If present, also read ".ai-workflow/state/context.md" for additional notes
+   - Read "CLAUDE.md" for Laravel Boost guidelines and coding standards
+
+2. **ANALYZE** (determine what to do):
+   - Identify the next incomplete task from ".ai-workflow/state/tasks.md"
+   - Understand what this task requires (dependencies, files, modules)
+   - Check if any previous work needs continuation
+   - Honor maintainability and conventions defined in requirements and docs
+
+3. **ACT** (execute development work):
+   - Work ONLY on the current incomplete task
+   - Create/modify files needed for this specific task
+   - Follow project conventions (stack-aware: Laravel 12 + React + Inertia + shadcn/ui)
+   - Ensure code is maintainable, documented, and testable
+   - Use appropriate logging, error handling, and component/service patterns
+
+4. **VERIFY** (quality assurance):
+   - Run applicable checks for the stack and languages (PHP, TypeScript):
+     - PHP/Laravel (if modified): phpstan, pint, pest
+     - JS/React (if modified): eslint, prettier, vitest
+     - E2E (if applicable): playwright
+   - Manually validate critical flows if relevant
+   - Ensure the task is fully complete and working
+
+5. **UPDATE STATE** (record progress):
+   - Mark completed tasks with "[x]" in ".ai-workflow/state/tasks.md"
+   - Append a detailed progress entry with timestamp to ".ai-workflow/state/progress.log"
+   - Identify the next task or mark the project complete
+
+**CONTEXT MANAGEMENT:**
+- When approaching context limits, save all progress to state files
+- End with: "Continue development with: /dev"
+- Never leave work in an incomplete state
+
+**OUTPUT FORMAT:**
+```
+🔄 AUTONOMOUS DEVELOPMENT CYCLE
+Current Task: [task code and description]
+Action: [what you're implementing]
+Progress: [current progress status]
+Next: [next task or completion status]
+```
+Begin autonomous development now.

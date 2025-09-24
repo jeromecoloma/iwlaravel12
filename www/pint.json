@@ -1,0 +1,33 @@
+{
+    "preset": "laravel",
+    "rules": {
+        "trailing_comma_in_multiline": {
+            "elements": ["arrays", "match", "parameters"]
+        },
+        "no_unused_imports": true,
+        "ordered_imports": {
+            "sort_algorithm": "alpha",
+            "imports_order": ["const", "class", "function"]
+        },
+        "single_import_per_statement": true,
+        "global_namespace_import": {
+            "import_classes": true,
+            "import_constants": true,
+            "import_functions": true
+        },
+        "declare_strict_types": false,
+        "phpdoc_align": {
+            "align": "left"
+        },
+        "phpdoc_order": true,
+        "phpdoc_separation": true,
+        "method_chaining_indentation": true,
+        "multiline_whitespace_before_semicolons": false,
+        "no_superfluous_phpdoc_tags": {
+            "allow_mixed": true,
+            "allow_unused_params": false,
+            "remove_inheritdoc": false
+        }
+    },
+    "exclude": ["vendor", "node_modules", "storage", "bootstrap/cache", "public/hot", "public/storage", "tests/Feature/ContactFormTest.php"]
+}
